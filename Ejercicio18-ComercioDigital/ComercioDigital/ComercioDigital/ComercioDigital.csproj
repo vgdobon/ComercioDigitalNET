@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0200B3A7-74AC-4104-94CF-9F1F4C99C394}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ComercioDigital</RootNamespace>
+    <AssemblyName>ComercioDigital</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\Almacen.cs" />
+    <Compile Include="DTOs\Personas\Carrito.cs" />
+    <Compile Include="DTOs\Productos\InfoProducto.cs" />
+    <Compile Include="DTOs\Productos\Moda\Bolso.cs" />
+    <Compile Include="DTOs\Productos\Moda\Calzado.cs" />
+    <Compile Include="DTOs\Productos\Moda\Joyeria.cs" />
+    <Compile Include="DTOs\Productos\Moda\Moda.cs" />
+    <Compile Include="DTOs\Productos\Tecnologia\Movil.cs" />
+    <Compile Include="DTOs\Productos\Multimedia\Multimedia.cs" />
+    <Compile Include="DTOs\Productos\Multimedia\Musica.cs" />
+    <Compile Include="DTOs\Productos\Tecnologia\Ordenador.cs" />
+    <Compile Include="DTOs\Productos\Multimedia\Pelicula.cs" />
+    <Compile Include="DTOs\Personas\Usuario.cs" />
+    <Compile Include="DTOs\Productos\Producto.cs" />
+    <Compile Include="DTOs\Productos\Moda\Ropa.cs" />
+    <Compile Include="DTOs\Productos\Tecnologia\Tecnologia.cs" />
+    <Compile Include="DTOs\Personas\Vendedor.cs" />
+    <Compile Include="DTOs\Productos\Tecnologia\VideoConsola.cs" />
+    <Compile Include="DTOs\Productos\Multimedia\VideosJuego.cs" />
+    <Compile Include="Presentacion\MenuPrincipal.cs" />
+    <Compile Include="Presentacion\MenuUsuario.cs" />
+    <Compile Include="Presentacion\MenuVendedor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\GestionComercio.cs" />
+    <Compile Include="Servicio\GestionUsuarios.cs" />
+    <Compile Include="Servicio\GestionVendedores.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
